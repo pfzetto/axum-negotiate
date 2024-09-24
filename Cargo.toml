@@ -1,0 +1,33 @@
+[package]
+name = "axum-negotiate"
+description = "Kerberos SPNEGO and NTLM Authentication(RFC4559) for axum"
+version = "0.1.1"
+edition = "2021"
+authors = [ "Paul Zinselmeyer<info@pfzetto.de>" ]
+readme = "README.md"
+repository = "https://github.com/pfzetto/axum-negotiate"
+license = "LGPL-3.0-or-later"
+keywords = [ "axum", "ntlm", "kerberos", "spnego", "gssapi" ]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+thiserror = "1.0"
+base64 = "0.22"
+axum-core = "0.4"
+http = "1.1"
+tower-layer = "0.3"
+tower-service = "0.3"
+libgssapi = "0.7"
+futures-util = "0.3"
+async-trait = "0.1"
+
+[dev-dependencies]
+env_logger = "0.11"
+tokio = { version = "1.39", features = ["full"] }
+axum = "0.7"
+tower = "0.4"
+
+[[example]]
+name = "basic"
